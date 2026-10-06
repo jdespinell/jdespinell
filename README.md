@@ -18,18 +18,27 @@
 <a id="-english"></a>
 ## 🇺🇸 English
 
-Data Scientist and Quantitative Modeler with a solid academic background (**Ph.D. and M.Sc. in Pure Mathematics / Singularity Theory**) and practical experience building end-to-end analytical pipelines and software architectures.
+Data Scientist and Quantitative Modeler with a solid academic background (**Ph.D. and M.Sc. in Pure Mathematics / Singularity Theory**) and practical experience building end-to-end analytical pipelines, machine learning models, and software architectures.
 
-My transition to Data Science and the Financial Sector (Banking, Insurance, and Capital Markets) merges the **rigorous analytical foundation of advanced mathematics** (algebra, convex geometry, statistical inference, and time series modeling) with **software engineering execution** (modular data pipelines, relational SQL modeling, REST APIs with FastAPI, Docker containerization, and Generative AI integration).
+My transition to Data Science and the Financial Sector (Banking, Insurance, and Capital Markets) merges the **rigorous analytical foundation of advanced mathematics** (algebra, convex geometry, statistical inference, and time series modeling) with **software engineering execution** (modular data pipelines, relational SQL modeling, vector databases, GraphRAG, REST APIs with FastAPI, Docker containerization, and Generative AI integration).
 
-- 🛠️ **Core Stack:** Python (Pandas, Scikit-Learn, Statsmodels, SciPy, FastAPI, SQLAlchemy), SQL (PostgreSQL), Docker, Git.
-- 📊 **Specialties:** Quantitative modeling, financial risk & fundamental rating models, time series analysis (structural trend & ETS models), clustering & dimensionality reduction (K-Means, PCA), mathematical optimization, and LLM integrations.
+- 🛠️ **Core Stack:** Python (Pandas, Scikit-Learn, Statsmodels, SciPy, FastAPI, SQLAlchemy), SQL (PostgreSQL, pgvector), Neo4j, Docker, Git.
+- 📊 **Specialties:** Quantitative modeling, financial risk & fundamental rating models, time series analysis (structural trend & ETS models), clustering & dimensionality reduction (K-Means, PCA), mathematical optimization, and Advanced Generative AI (RAG, GraphRAG, Knowledge Graphs, LLM agents).
 - 🎓 **Education:** Ph.D. and M.Sc. in Mathematics (research focused on geometry, algebra, and complex mathematical structures).
 - 📍 Based in Brazil | Open to on-site and remote opportunities.
 
 ### 🚀 Featured Projects
 
-#### 1. [Cluster_B3 — Quantitative Segmentation & Time Series Pipeline for Brazilian Equities (B3)](https://github.com/jdespinell/Cluster_B3)
+#### 1. [Research Intelligence Assistant — Hybrid GraphRAG & Knowledge Graph for Scientific Literature](https://github.com/jdespinell/Research_Intelligence_Assistant)
+- **Description:** End-to-end intelligent research assistant designed for deep scientific literature analysis in algebraic geometry and singularity theory, combining dense **Vector RAG (pgvector)** and relational **GraphRAG (Neo4j)** with an adaptive query router.
+  - **Dense Vector Search (pgvector):** Ingests, sanitizes, and chunks hundreds of complex mathematical research papers into thousands of passages indexed with `BAAI/bge-base-en-v1.5` dense embeddings (768-dim) in PostgreSQL 16.
+  - **Knowledge Graph Extraction (Neo4j):** Automated LLM pipeline with structural JSON repair for LaTeX formulas that extracts entities (*Theorems, Concepts, Methods, Authors*) and directed semantic relationships (*`WROTE`*, *`DISCUSSES`*, *`PROVES`*, *`GENERALIZES`*), modeling a 900+ node graph.
+  - **Adaptive Hybrid Router & Synthesis:** Dynamic classification of queries (factual, relational, or hybrid) that merges dense text retrieval with multi-hop graph traversals for zero-hallucination synthesis with page-level citations.
+  - **Evaluation & Production Stack:** Automated RAG evaluation pipeline with IR metrics and LLM-as-a-judge (Precision@k, Recall@k, MRR, Faithfulness = 1.0), exposed via a FastAPI REST backend and an interactive Streamlit UI.
+- **Stack:** Python, PostgreSQL + pgvector, Neo4j, FastAPI, Streamlit, Docker Compose, Google Gemini / Ollama, BAAI Embeddings, PyTest.
+- [Explore repository →](https://github.com/jdespinell/Research_Intelligence_Assistant)
+
+#### 2. [Cluster_B3 — Quantitative Segmentation & Time Series Pipeline for Brazilian Equities (B3)](https://github.com/jdespinell/Cluster_B3)
 - **Description:** End-to-end quantitative analysis and unsupervised Machine Learning system developed for data cleaning, temporal modeling, and fundamental segmentation of **372 companies listed on the Brazilian stock exchange (B3)** using 10 years of historical financial statements (2017–2026).
   - **Robust Data Preprocessing:** Intra-sector median imputation and 1%-99% winsorization to handle severe financial skews and market outliers.
   - **Time Series with Holt Damped ETS:** Structural level and smoothed trend extraction over 10-year historical series, filtering out short-term macroeconomic noise.
@@ -39,7 +48,7 @@ My transition to Data Science and the Financial Sector (Banking, Insurance, and 
 - **Stack:** Python (Pandas, Scikit-Learn, Statsmodels, NumPy, Matplotlib, Seaborn), PCA, K-Means, Holt Damped ETS, HTML/CSS.
 - [Explore repository →](https://github.com/jdespinell/Cluster_B3)
 
-#### 2. [Biblioteca — SaaS Platform with Backend Architecture, SQL Modeling & GenAI](https://github.com/jdespinell/biblioteca)
+#### 3. [Biblioteca — SaaS Platform with Backend Architecture, SQL Modeling & GenAI](https://github.com/jdespinell/biblioteca)
 - **Description:** Full-featured microservices-oriented web platform for intelligent catalog management with multilingual support (EN/ES/PT) and Multimodal Artificial Intelligence.
   - **Backend Architecture & Security:** FastAPI 0.115 and SQLAlchemy 2.0 backend structured in layered services, JWT authentication with `HttpOnly` cookies, row-level security (RLS), and Nginx reverse proxy with rate limiting and security headers.
   - **Relational Data Modeling:** PostgreSQL 16 database with automated schema migrations and versioning via Alembic.
@@ -48,7 +57,7 @@ My transition to Data Science and the Financial Sector (Banking, Insurance, and 
 - **Stack:** Python (FastAPI, SQLAlchemy, Alembic, Pydantic, Pytest), PostgreSQL, Docker Compose, Nginx, Google Gemini API, Next.js 14, TypeScript.
 - [Explore repository →](https://github.com/jdespinell/biblioteca)
 
-#### 3. [Newton Polyhedron — Convex Optimization, 3D Geometry & Scientific Computing](https://github.com/jdespinell/Newton_polyhedro)
+#### 4. [Newton Polyhedron — Convex Optimization, 3D Geometry & Scientific Computing](https://github.com/jdespinell/Newton_polyhedro)
 - **Description:** Scientific computing Python tool for metric analysis, calculation, and interactive 3D visualization of **Newton Polyhedra** and **Convex Hulls** in $\mathbb{R}^3$.
   - **Geometric Algorithms & Optimization:** Determines extreme vertices and triangular facets (*simplices*) from discrete point clouds via `scipy.spatial.ConvexHull`.
   - **Support Hyperplanes & Normal Vectors:** Computes inward-directed normal vectors for every facet — fundamental for support hyperplane analysis, valuations, and linear/convex optimization problems.
@@ -57,7 +66,7 @@ My transition to Data Science and the Financial Sector (Banking, Insurance, and 
 - **Stack:** Python, SciPy (`scipy.spatial.ConvexHull`), NumPy, Matplotlib 3D.
 - [Explore repository →](https://github.com/jdespinell/Newton_polyhedro)
 
-#### 4. [MedFamilia — PWA App for Intelligent Health Data Extraction with AI](https://github.com/jdespinell/medfamilia)
+#### 5. [MedFamilia — PWA App for Intelligent Health Data Extraction with AI](https://github.com/jdespinell/medfamilia)
 - **Description:** Responsive mobile-first PWA application designed to centralize and track family medical routines, leveraging multimodal AI extraction agents.
   - **Computer Vision & OCR with Gemini:** Automated reading and structuring of printed/handwritten medical orders and exam results, turning complex medical jargon into clear summaries.
   - **Cloud Integrations:** Native synchronization with Google Calendar API and automated push notification services (Web Push / Service Worker).
@@ -77,18 +86,27 @@ My transition to Data Science and the Financial Sector (Banking, Insurance, and 
 <a id="-português"></a>
 ## 🇧🇷 Português
 
-Cientista de Dados e Modelador Quantitativo com sólida formação acadêmica (**Doutorado e Mestrado em Matemática Pura / Teoria de Singularidades**) e experiência prática no desenvolvimento de pipelines analíticos e arquitetura de software.
+Cientista de Dados e Modelador Quantitativo com sólida formação acadêmica (**Doutorado e Mestrado em Matemática Pura / Teoria de Singularidades**) e experiência prática no desenvolvimento de pipelines analíticos, modelos de machine learning e arquitetura de software.
 
-Minha transição para a Ciência de Dados e o Setor Financeiro (Bancos, Seguradoras e Mercado de Capitais) une o **rigor analítico da matemática avançada** (álgebra, geometria convexa, inferência e modelagem estatística) à **capacidade de engenharia de software** (criação de pipelines de dados modulares, modelagem relacional SQL, APIs com FastAPI, conteinerização com Docker e integração de soluções com Inteligência Artificial Generativa).
+Minha transição para a Ciência de Dados e o Setor Financeiro (Bancos, Seguradoras e Mercado de Capitais) une o **rigor analítico da matemática avançada** (álgebra, geometria convexa, inferência e modelagem estatística) à **capacidade de engenharia de software** (criação de pipelines de dados modulares, modelagem relacional SQL, bancos vetoriais, GraphRAG, APIs com FastAPI, conteinerização com Docker e integração de soluções com Inteligência Artificial Generativa).
 
-- 🛠️ **Stack principal:** Python (Pandas, Scikit-Learn, Statsmodels, SciPy, FastAPI, SQLAlchemy), SQL (PostgreSQL), Docker, Git.
-- 📊 **Especialidades:** Modelagem quantitativa, análise de risco e ratings fundamentalistas, séries temporais (modelos ETS/tendência estrutural), clusterização e redução de dimensionalidade (K-Means, PCA), otimização matemática e LLMs.
+- 🛠️ **Stack principal:** Python (Pandas, Scikit-Learn, Statsmodels, SciPy, FastAPI, SQLAlchemy), SQL (PostgreSQL, pgvector), Neo4j, Docker, Git.
+- 📊 **Especialidades:** Modelagem quantitativa, análise de risco e ratings fundamentalistas, séries temporais (modelos ETS/tendência estrutural), clusterização e redução de dimensionalidade (K-Means, PCA), otimização matemática e IA Generativa Avançada (RAG, GraphRAG, Knowledge Graphs, Agentes de IA).
 - 🎓 **Formação:** Doutorado e Mestrado em Matemática (pesquisa com forte ênfase em geometria, álgebra e estruturas complexas).
 - 📍 Baseado no Brasil | Disponível para atuação presencial ou remota.
 
 ### 🚀 Projetos em Destaque
 
-#### 1. [Cluster_B3 — Pipeline Quantitativo de Segmentação e Modelagem Temporal de Empresas da B3](https://github.com/jdespinell/Cluster_B3)
+#### 1. [Research Intelligence Assistant — GraphRAG Híbrido e Grafo de Conhecimento para Literatura Científica](https://github.com/jdespinell/Research_Intelligence_Assistant)
+- **Descrição:** Assistente inteligente end-to-end para análise de literatura científica avançada em geometria algébrica e teoria de singularidades, combinando **RAG Vetorial Denso (pgvector)** e **GraphRAG Relacional (Neo4j)** com roteamento adaptativo de consultas.
+  - **Busca Vetorial Densa (pgvector):** Ingestão, sanitização e chunking de artigos matemáticos complexos indexados com embeddings `BAAI/bge-base-en-v1.5` (768 dimensões) no PostgreSQL 16 com extensão `pgvector`.
+  - **Construção de Grafo de Conhecimento (Neo4j):** Extração automatizada via LLM com reparo estrutural de fórmulas em LaTeX para mapear entidades (*Theorems, Concepts, Methods, Authors*) e relacionamentos semânticos (*`WROTE`*, *`DISCUSSES`*, *`PROVES`*, *`GENERALIZES`*), totalizando mais de 900 nós e 950 relações.
+  - **Roteamento Híbrido e Síntese:** Classificação dinâmica da intenção do usuário (factual, relacional ou híbrida), combinando passagens de texto exatas com travessias de múltiplos saltos (*multi-hop*) no grafo e citações diretas de páginas.
+  - **Avaliação de RAG e Produção:** Pipeline de avaliação com métricas de RI e *LLM-as-a-judge* (Precision@k, MRR, Faithfulness = 1.0, 100% livre de alucinações), servido por API REST em FastAPI e frontend interativo em Streamlit.
+- **Stack:** Python, PostgreSQL + pgvector, Neo4j, FastAPI, Streamlit, Docker Compose, Google Gemini / Ollama, BAAI Embeddings, PyTest.
+- [Acessar repositório →](https://github.com/jdespinell/Research_Intelligence_Assistant)
+
+#### 2. [Cluster_B3 — Pipeline Quantitativo de Segmentação e Modelagem Temporal de Empresas da B3](https://github.com/jdespinell/Cluster_B3)
 - **Descrição:** Sistema end-to-end de análise quantitativa e Machine Learning não supervisionado desenvolvido para a limpeza, modelagem temporal e segmentação fundamentalista de **372 empresas listadas na bolsa brasileira (B3)** com base em seus balanços históricos (2017–2026).
   - **Tratamento Robusto de Dados:** Imputação setorial por mediana e winsorização (1%-99%) para tratamento de assimetrias e outliers de mercado.
   - **Séries Temporais com Holt Damped ETS:** Extração de nível estrutural e tendência suavizada de 10 anos de histórico, eliminando ruídos conjunturais de curto prazo.
@@ -98,7 +116,7 @@ Minha transição para a Ciência de Dados e o Setor Financeiro (Bancos, Segurad
 - **Stack:** Python (Pandas, Scikit-Learn, Statsmodels, NumPy, Matplotlib, Seaborn), PCA, K-Means, Holt Damped ETS, HTML/CSS.
 - [Acessar repositório →](https://github.com/jdespinell/Cluster_B3)
 
-#### 2. [Biblioteca — Plataforma SaaS com Arquitetura Backend, Modelagem SQL e IA](https://github.com/jdespinell/biblioteca)
+#### 3. [Biblioteca — Plataforma SaaS com Arquitetura Backend, Modelagem SQL e IA](https://github.com/jdespinell/biblioteca)
 - **Descrição:** Aplicação completa em arquitetura de microsserviços voltada para gerenciamento inteligente de acervos com suporte internacional (ES/EN/PT) e integração de Inteligência Artificial Multimodal.
   - **Arquitetura e Segurança:** Backend em FastAPI 0.115 e SQLAlchemy 2.0, estruturado em camadas de serviço, autenticação JWT com cookies `HttpOnly`, controle de acesso (RLS) e proxy reverso com Nginx (rate limiting e cabeçalhos de segurança).
   - **Modelagem Relacional de Dados:** Banco de dados PostgreSQL 16 com controle de versões de schema via migrações automáticas no Alembic.
@@ -107,7 +125,7 @@ Minha transição para a Ciência de Dados e o Setor Financeiro (Bancos, Segurad
 - **Stack:** Python (FastAPI, SQLAlchemy, Alembic, Pydantic, Pytest), PostgreSQL, Docker Compose, Nginx, Google Gemini API, Next.js 14, TypeScript.
 - [Acessar repositório →](https://github.com/jdespinell/biblioteca)
 
-#### 3. [Newton Polyhedron — Otimização Convexa, Geometria 3D e Computação Científica](https://github.com/jdespinell/Newton_polyhedro)
+#### 4. [Newton Polyhedron — Otimização Convexa, Geometria 3D e Computação Científica](https://github.com/jdespinell/Newton_polyhedro)
 - **Descrição:** Ferramenta de computação científica desenvolvida em Python para cálculo, análise métrica e visualização tridimensional interativa de **Poliedros de Newton** e **Envoltórias Convexas (Convex Hulls)** em $\mathbb{R}^3$.
   - **Algoritmos Geométricos e Otimização:** Determinação de vértices extremos e faces triangulares (*simplices*) a partir de conjuntos discretos de pontos via `scipy.spatial.ConvexHull`.
   - **Hiperplanos de Suporte e Normais:** Cálculo vetorial das normais interiores direcionadas de cada faceta — base matemática essencial para análise de hiperplanos de suporte, valorações e problemas de otimização linear/convexa.
@@ -116,7 +134,7 @@ Minha transição para a Ciência de Dados e o Setor Financeiro (Bancos, Segurad
 - **Stack:** Python, SciPy (`scipy.spatial.ConvexHull`), NumPy, Matplotlib 3D.
 - [Acessar repositório →](https://github.com/jdespinell/Newton_polyhedro)
 
-#### 4. [MedFamilia — Aplicação PWA de Gestão e Extração Inteligente com IA](https://github.com/jdespinell/medfamilia)
+#### 5. [MedFamilia — Aplicação PWA de Gestão e Extração Inteligente com IA](https://github.com/jdespinell/medfamilia)
 - **Descrição:** Aplicação web responsiva (PWA/Mobile-First) projetada para centralização e acompanhamento de rotinas médicas familiares, incorporando agentes de extração de dados e IA generativa.
   - **Visão Computacional e OCR com Gemini:** Leitura e estruturação automática de pedidos e laudos médicos a partir de imagens/PDFs, traduzindo resultados complexos em resumos acessíveis ao usuário.
   - **Integrações em Nuvem:** Sincronização automática com a API do Google Calendar e mensageria de notificações push nativas (Web Push / Service Worker).
@@ -136,18 +154,27 @@ Minha transição para a Ciência de Dados e o Setor Financeiro (Bancos, Segurad
 <a id="-español"></a>
 ## 🇪🇸 Español
 
-Científico de Datos y Modelador Cuantitativo con sólida formación académica (**Doctorado y Maestría en Matemáticas Puras / Teoría de Singularidades**) y experiencia práctica en el desarrollo de pipelines analíticos y arquitectura de software.
+Científico de Datos y Modelador Cuantitativo con sólida formación académica (**Doctorado y Maestría en Matemáticas Puras / Teoría de Singularidades**) y experiencia práctica en el desarrollo de pipelines analíticos, modelos de machine learning y arquitectura de software.
 
-Mi transición hacia la Ciencia de Datos y el Sector Financiero (Banca, Aseguradoras y Mercado de Capitales) une el **rigor analítico de la matemática avanzada** (álgebra, geometría convexa, inferencia y modelado estadístico) con la **capacidad de ingeniería de software** (creación de pipelines de datos modulares, modelado relacional SQL, APIs con FastAPI, contenerización con Docker e integración de soluciones con Inteligencia Artificial Generativa).
+Mi transición hacia la Ciencia de Datos y el Sector Financiero (Banca, Aseguradoras y Mercado de Capitales) une el **rigor analítico de la matemática avanzada** (álgebra, geometría convexa, inferencia y modelado estadístico) con la **capacidad de ingeniería de software** (creación de pipelines de datos modulares, modelado relacional SQL, bases de datos vectoriales, GraphRAG, APIs con FastAPI, contenerización con Docker e integración de soluciones con Inteligencia Artificial Generativa).
 
-- 🛠️ **Stack principal:** Python (Pandas, Scikit-Learn, Statsmodels, SciPy, FastAPI, SQLAlchemy), SQL (PostgreSQL), Docker, Git.
-- 📊 **Especialidades:** Modelado cuantitativo, análisis de riesgo y ratings fundamentalistas, series de tiempo (modelos ETS/tendencia estructural), clusterización y reducción de dimensionalidad (K-Means, PCA), optimización matemática y LLMs.
+- 🛠️ **Stack principal:** Python (Pandas, Scikit-Learn, Statsmodels, SciPy, FastAPI, SQLAlchemy), SQL (PostgreSQL, pgvector), Neo4j, Docker, Git.
+- 📊 **Especialidades:** Modelado cuantitativo, análisis de riesgo y ratings fundamentalistas, series de tiempo (modelos ETS/tendencia estructural), clusterización y reducción de dimensionalidad (K-Means, PCA), optimización matemática e IA Generativa Avanzada (RAG, GraphRAG, Grafos de Conocimiento, Agentes de IA).
 - 🎓 **Formación:** Doctorado y Maestría en Matemáticas (investigación con fuerte énfasis en geometría, álgebra y estructuras complejas).
 - 📍 Basado en Brasil | Disponible para modalidad presencial o remota.
 
 ### 🚀 Proyectos Destacados
 
-#### 1. [Cluster_B3 — Pipeline Cuantitativo de Segmentación y Modelado Temporal de Empresas de la B3](https://github.com/jdespinell/Cluster_B3)
+#### 1. [Research Intelligence Assistant — GraphRAG Híbrido y Grafo de Conocimiento para Literatura Científica](https://github.com/jdespinell/Research_Intelligence_Assistant)
+- **Descripción:** Asistente inteligente end-to-end diseñado para el análisis profundo de literatura científica en geometría algebraica y teoría de singularidades, combinando **RAG Vectorial Denso (pgvector)** y **GraphRAG Relacional (Neo4j)** con un enrutador adaptativo de consultas.
+  - **Búsqueda Vectorial Densa (pgvector):** Ingesta, sanitización y fragmentación de artículos matemáticos complejos indexados con embeddings densos `BAAI/bge-base-en-v1.5` (768 dimensiones) en PostgreSQL 16 con `pgvector`.
+  - **Extracción de Grafo de Conocimiento (Neo4j):** Pipeline automatizado con LLMs y reparación estructural de fórmulas LaTeX para extraer entidades (*Theorems, Concepts, Methods, Authors*) y relaciones semánticas (*`WROTE`*, *`DISCUSSES`*, *`PROVES`*, *`GENERALIZES`*), modelando más de 900 nodos y 950 aristas.
+  - **Enrutador Adaptativo y Síntesis:** Clasificación dinámica de la consulta (factual, relacional o híbrida) fusionando pasajes textuales exactos con recorridos multi-salto (*multi-hop*) en el grafo y citas directas de página.
+  - **Evaluación y Puesta en Producción:** Pipeline de evaluación automatizada con métricas de RI y *LLM-as-a-judge* (Precision@k, Recall@k, MRR, Faithfulness = 1.0, 100% libre de alucinaciones), expuesto mediante API REST en FastAPI y frontend en Streamlit.
+- **Stack:** Python, PostgreSQL + pgvector, Neo4j, FastAPI, Streamlit, Docker Compose, Google Gemini / Ollama, BAAI Embeddings, PyTest.
+- [Acceder al repositorio →](https://github.com/jdespinell/Research_Intelligence_Assistant)
+
+#### 2. [Cluster_B3 — Pipeline Cuantitativo de Segmentación y Modelado Temporal de Empresas de la B3](https://github.com/jdespinell/Cluster_B3)
 - **Descripción:** Sistema end-to-end de análisis cuantitativo y Machine Learning no supervisado desarrollado para la limpieza, modelado temporal y segmentación fundamentalista de **372 empresas cotizadas en la bolsa brasileña (B3)** a partir de sus balances históricos (2017–2026).
   - **Tratamiento Robusto de Datos:** Imputación sectorial por mediana y winsorización (1%-99%) para mitigar asimetrías y valores atípicos del mercado.
   - **Series de Tiempo con Holt Damped ETS:** Extracción de nivel estructural y tendencia suavizada a lo largo de 10 años de histórico, eliminando ruidos coyunturales de corto plazo.
@@ -157,7 +184,7 @@ Mi transición hacia la Ciencia de Datos y el Sector Financiero (Banca, Asegurad
 - **Stack:** Python (Pandas, Scikit-Learn, Statsmodels, NumPy, Matplotlib, Seaborn), PCA, K-Means, Holt Damped ETS, HTML/CSS.
 - [Acceder al repositorio →](https://github.com/jdespinell/Cluster_B3)
 
-#### 2. [Biblioteca — Plataforma SaaS con Arquitectura Backend, Modelado SQL e IA](https://github.com/jdespinell/biblioteca)
+#### 3. [Biblioteca — Plataforma SaaS con Arquitectura Backend, Modelado SQL e IA](https://github.com/jdespinell/biblioteca)
 - **Descripción:** Aplicación completa en arquitectura de microservicios diseñada para la gestión inteligente de colecciones con soporte multilenguaje (ES/EN/PT) e integración de Inteligencia Artificial Multimodal.
   - **Arquitectura y Seguridad:** Backend en FastAPI 0.115 y SQLAlchemy 2.0 con diseño en capas, autenticación JWT con cookies `HttpOnly`, control de acceso (RLS) y proxy inverso con Nginx (rate limiting y cabeceras de seguridad).
   - **Modelado Relacional de Datos:** Base de datos PostgreSQL 16 con versionado y migraciones de esquema automáticas mediante Alembic.
@@ -166,7 +193,7 @@ Mi transición hacia la Ciencia de Datos y el Sector Financiero (Banca, Asegurad
 - **Stack:** Python (FastAPI, SQLAlchemy, Alembic, Pydantic, Pytest), PostgreSQL, Docker Compose, Nginx, Google Gemini API, Next.js 14, TypeScript.
 - [Acceder al repositorio →](https://github.com/jdespinell/biblioteca)
 
-#### 3. [Newton Polyhedron — Optimización Convexa, Geometría 3D y Computación Científica](https://github.com/jdespinell/Newton_polyhedro)
+#### 4. [Newton Polyhedron — Optimización Convexa, Geometría 3D y Computación Científica](https://github.com/jdespinell/Newton_polyhedro)
 - **Descripción:** Herramienta de computación científica desarrollada en Python para cálculo métrico, análisis y visualización tridimensional interactiva de **Poliedros de Newton** y **Envolventes Convexas (Convex Hulls)** en $\mathbb{R}^3$.
   - **Algoritmos Geométricos y Optimización:** Determinación de vértices extremos y facetas triangulares (*simplices*) a partir de nubes de puntos mediante `scipy.spatial.ConvexHull`.
   - **Hiperplanos de Soporte y Normales:** Cálculo vectorial de las normales interiores directas de cada faceta — base matemática esencial para análisis de hiperplanos de soporte, valoraciones y problemas de optimización lineal y convexa.
@@ -175,7 +202,7 @@ Mi transición hacia la Ciencia de Datos y el Sector Financiero (Banca, Asegurad
 - **Stack:** Python, SciPy (`scipy.spatial.ConvexHull`), NumPy, Matplotlib 3D.
 - [Acceder al repositorio →](https://github.com/jdespinell/Newton_polyhedro)
 
-#### 4. [MedFamilia — Aplicación PWA de Gestión y Extracción Inteligente con IA](https://github.com/jdespinell/medfamilia)
+#### 5. [MedFamilia — Aplicación PWA de Gestión y Extracción Inteligente con IA](https://github.com/jdespinell/medfamilia)
 - **Descripción:** Aplicación web responsiva (PWA/Mobile-First) para la centralización y seguimiento de citas médicas familiares, integrando agentes de extracción de datos con IA generativa.
   - **Visión Computacional y OCR con Gemini:** Lectura y estructuración automática de órdenes y resultados médicos desde imágenes/PDFs, traduciendo diagnósticos complejos a resúmenes comprensibles.
   - **Integraciones Cloud:** Sincronización automática con Google Calendar API y notificaciones push nativas para móviles (Web Push / Service Worker).
